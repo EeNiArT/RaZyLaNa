@@ -26,5 +26,11 @@ namespace RaZyLaNa.Controllers
 
             return View();
         }
+        public ActionResult Rezyla()
+        {
+            ViewBag.Message = "Your news feed.";
+
+            return View();
+        }
     }
 }
