@@ -1,0 +1,787 @@
+﻿<style>
+
+ /* Font Definitions */
+ @@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 6 6 2 2 2 3 2 4;}
+@@font-face
+	{font-family:"\@@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:130%;
+	page-break-before:always;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+h6
+	{margin-right:0in;
+	margin-left:0in;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoPageNumber
+	{font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:150%;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Body Text Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+	{mso-style-link:"Message Header Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:56.7pt;
+	margin-bottom:.0001pt;
+	text-indent:-56.7pt;
+	line-height:150%;
+	background:#CCCCCC;
+	border:none;
+	padding:0in;
+	font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:windowtext;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{mso-style-link:"Body Text 3 Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:150%;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	color:windowtext;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-before:always;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-link:"Body Text";
+	font-family:"Arial",sans-serif;}
+p.body, li.body, div.body
+	{mso-style-name:body;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:150%;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	color:#4D6671;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.BodyText3Char
+	{mso-style-name:"Body Text 3 Char";
+	mso-style-link:"Body Text 3";
+	font-family:"Arial",sans-serif;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";
+	font-family:"Arial",sans-serif;}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.BodyText, li.BodyText, div.BodyText
+	{mso-style-name:BodyText;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.45pt;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Tahoma",sans-serif;
+	color:windowtext;}
+p.checklistbullet, li.checklistbullet, div.checklistbullet
+	{mso-style-name:"checklist bullet";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Guidance, li.Guidance, div.Guidance
+	{mso-style-name:Guidance;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#1F4E79;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Arial",sans-serif;}
+p.HeadingNoTOC, li.HeadingNoTOC, div.HeadingNoTOC
+	{mso-style-name:"Heading NoTOC";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+span.MessageHeaderChar
+	{mso-style-name:"Message Header Char";
+	mso-style-link:"Message Header";
+	font-family:"Calibri Light",sans-serif;
+	background:#CCCCCC;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.TableText, li.TableText, div.TableText
+	{mso-style-name:"Table Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.TableHead, li.TableHead, div.TableHead
+	{mso-style-name:"Table Head";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.TableNumbered, li.TableNumbered, div.TableNumbered
+	{mso-style-name:"Table Numbered";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.TableNumberedCxSpFirst, li.TableNumberedCxSpFirst, div.TableNumberedCxSpFirst
+	{mso-style-name:"Table NumberedCxSpFirst";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.TableNumberedCxSpMiddle, li.TableNumberedCxSpMiddle, div.TableNumberedCxSpMiddle
+	{mso-style-name:"Table NumberedCxSpMiddle";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.TableNumberedCxSpLast, li.TableNumberedCxSpLast, div.TableNumberedCxSpLast
+	{mso-style-name:"Table NumberedCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @@page WordSection1
+	{size:595.35pt 842.0pt;
+	margin:74.75pt 56.7pt 48.2pt 73.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+
+</style>
+
+<div class=WordSection1>
+
+    <h1><span lang=EN-AU>Privacy Policy </span></h1>
+
+    <p class=MsoNormal>
+        <b><span lang=EN-AU>Razylana</span></b><span lang=EN-AU>
+            is
+            committed to providing quality services to you and this policy outlines our
+            ongoing obligations to you in respect of how we manage your Personal
+            Information.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            We have adopted the National Privacy
+            Principles (NPPs) contained in the Privacy Act 1988 (Oath) (the Privacy Act).
+            The NPPs govern the way in which we collect, use, disclose, store, secure and
+            dispose of your Personal Information.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            A copy of the Australian Privacy Principles
+            may be obtained from the App of The Office of the Federal Privacy Commissioner
+            at
+        </span><span lang=EN-AU><a href="http://www.privacy.gov.au">www.privacy.gov.au</a></span><span lang=EN-AU>.</span>
+    </p>
+
+    <h2><span lang=EN-AU>What is Personal Information and why do we collect it?</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Personal Information is information or an
+            opinion that identifies an individual. Examples of Personal Information we
+            collect include: names, addresses, email addresses, phone and facsimile
+            numbers.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            This Personal Information is obtained in
+            many ways including usernames, passwords  from third parties. We don’t
+            guarantee website links or policy of authorised third parties.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            We collect your Personal Information for
+            the primary purpose of providing our services to you, providing information to
+            our clients and marketing. We may also use your Personal Information for
+            secondary purposes closely related to the primary purpose, in circumstances
+            where you would reasonably expect such use or disclosure. You may unsubscribe
+            from our mailing/marketing lists at any time by contacting us in writing.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            When we collect Personal Information we
+            will, where appropriate and where possible, explain to you why we are
+            collecting the information and how we plan to use it.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Sensitive Information</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Sensitive information is defined in the
+            Privacy Act to include information or opinion about such things as an
+            individual's racial or ethnic origin, political opinions, membership of a
+            political association, religious or philosophical beliefs, membership of a
+            trade union or other professional body, criminal record or health information.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Sensitive information will be used by us
+            only:
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            •           For the primary purpose for which
+            it was obtained
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            •           For a secondary purpose that is
+            directly related to the primary purpose
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            •           With your consent; or where
+            required or authorised by law.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Third Parties</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Where reasonable and practicable to do so,
+            we will collect your Personal Information only from you. However, in some
+            circumstances we may be provided with information by third parties. In such a
+            case we will take reasonable steps to ensure that you are made aware of the
+            information provided to us by the third party.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Disclosure of Personal Information</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Your Personal Information may be disclosed
+            in a number of circumstances including the following:
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            •           Third parties where you consent
+            to the use or disclosure; and
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            •           Where required or authorised by
+            law.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Security of Personal Information</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Your Personal Information is stored in a
+            manner that reasonably protects it from misuse and loss and from unauthorized
+            access, modification or disclosure.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            When your Personal Information is no longer
+            needed for the purpose for which it was obtained, we will take reasonable steps
+            to destroy or permanently de-identify your Personal Information. However, most
+            of the Personal Information is or will be stored in client files which will be
+            kept by us for a minimum of 7 years.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Access to your Personal Information</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            You may access the Personal Information we
+            hold about you and to update and/or correct it, subject to certain exceptions.
+            If you wish to access your Personal Information, please contact us in writing.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            Razylana will not charge any fee for your
+            access request, but may charge an administrative fee for providing a copy of
+            your Personal Information.
+        </span>
+    </p>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            In order to protect your Personal
+            Information we may require identification from you before releasing the
+            requested information.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Maintaining the Quality of your Personal Information</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            It is an important to us that your Personal
+            Information is up to date. We  will  take reasonable steps to make sure that
+            your Personal Information is accurate, complete and up-to-date. If you find
+            that the information we have is not up to date or is inaccurate, please advise
+            us as soon as practicable so we can update our records and ensure we can
+            continue to provide quality services to you.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Policy Updates</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            This Policy may change from time to time
+            and is available on our website.
+        </span>
+    </p>
+
+    <h2><span lang=EN-AU>Privacy Policy Complaints and Enquiries</span></h2>
+
+    <p class=MsoNormal>
+        <span lang=EN-AU>
+            If you have any queries or complaints about
+            our Privacy Policy please contact us at:
+        </span>
+    </p>
+
+    <p class=MsoNormal><span lang=EN-AU>&nbsp;</span></p>
+
+    <p class=MsoNormal><b><span lang=EN-AU><a href="http://www.highyieldservices.com/"> HighYieldServices</a></span></b></p>
+
+    <p class=MsoNormal><b><span lang=EN-AU>http://www.highyieldservices.com/</span></b></p>
+
+    <p class=MsoNormal><b><span lang=EN-AU> </span></b></p>
+
+    <p class=MsoNormal><span lang=EN-AU> </span></p>
+
+</div>
